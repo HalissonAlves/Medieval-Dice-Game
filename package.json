@@ -1,0 +1,17 @@
+{
+  "name": "medieval_dice_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "browsersync": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
