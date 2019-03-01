@@ -153,3 +153,36 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+.formMaxScore {
+    position: absolute;
+    left: 50%;
+    bottom: 430px;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 18px;
+}
+
+#maxScore {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    background: #EB4D4D;
+    padding: 8px;
+    width: 80px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+#buttonMaxScore {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    width: 80px;
+    color: white;
+    background-color: #7ca813;
+    font-weight: 500;
+    cursor: pointer;
+}
