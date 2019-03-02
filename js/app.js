@@ -22,8 +22,8 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
         var dice2DOM = document.querySelector(".dice2");
         diceDOM.style.display = "block";
         dice2DOM.style.display = "block";
-        diceDOM.src = "dice-" + dice + ".png";
-        dice2DOM.src = "dice-" + dice2 + ".png";
+        diceDOM.src = "img/dice-" + dice + ".png";
+        dice2DOM.src = "img/dice-" + dice2 + ".png";
 
         if (dice == 6 && dice2 == 6) {
             scores[activePlayer] = 0;
