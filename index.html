@@ -3,47 +3,59 @@
     <head>
         <meta charset="UTF-8" />
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css" />
-        <link href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css" rel="stylesheet" />
         <link type="text/css" rel="stylesheet" href="css/style.css" />
 
         <title>Medieval Dice Game</title>
     </head>
 
     <body>
-        <div class="clearfix fixScore">
-            <p>Final Score</p>
-            <span id="finalScore">100</span>
-        </div>
         <div class="wrapper clearfix">
-            <div class="player-0-panel active">
-                <div class="player-name" id="name-0">Player 1</div>
-                <div class="player-score" id="score-0">43</div>
-                <div class="player-current-box">
-                    <div class="player-current-label">Current</div>
-                    <div class="player-current-score" id="current-0">11</div>
+            <div class="fixScore">
+                <p>Final Score</p>
+                <span id="finalScore">100</span>
+            </div>
+            <div class="clearfix">
+                <div class="player-0-panel active">
+                    <div class="player-name" id="name-0">Player 1</div>
+                    <div class="player-score" id="score-0">43</div>
+                    <div class="player-current-box">
+                        <div class="player-current-label">Current</div>
+                        <div class="player-current-score" id="current-0">11</div>
+                    </div>
+                </div>
+
+                <div class="player-1-panel">
+                    <div class="player-name" id="name-1">Player 2</div>
+                    <div class="player-score" id="score-1">72</div>
+                    <div class="player-current-box">
+                        <div class="player-current-label">Current</div>
+                        <div class="player-current-score" id="current-1">0</div>
+                    </div>
+                </div>
+
+                <button class="btn-new"><i class="icon ion-md-play"></i>New game</button>
+                <button class="btn-roll"><i class="icon ion-md-sync"></i>Roll dice</button>
+                <button class="btn-hold"><i class="icon ion-md-hand"></i>Hold</button>
+
+                <img src="img/dice-5.png" alt="Dice" class="dice" />
+                <img src="img/dice-5.png" alt="Dice" class="dice2" />
+
+                <div class="formMaxScore">
+                    Set Score:
+                    <input type="text" name="maxScore" id="maxScore" value="100" />
+                    <input type="button" value="OK" onclick="setMaxScore();" id="buttonMaxScore" />
                 </div>
             </div>
 
-            <div class="player-1-panel">
-                <div class="player-name" id="name-1">Player 2</div>
-                <div class="player-score" id="score-1">72</div>
-                <div class="player-current-box">
-                    <div class="player-current-label">Current</div>
-                    <div class="player-current-score" id="current-1">0</div>
-                </div>
-            </div>
-
-            <button class="btn-new"><i class="icon ion-md-play"></i>New game</button>
-            <button class="btn-roll"><i class="icon ion-md-sync"></i>Roll dice</button>
-            <button class="btn-hold"><i class="icon ion-md-hand"></i>Hold</button>
-
-            <img src="img/dice-5.png" alt="Dice" class="dice" />
-            <img src="img/dice-5.png" alt="Dice" class="dice2" />
-
-            <div class="formMaxScore">
-                Set Score:
-                <input type="text" name="maxScore" id="maxScore" value="100"/>
-                <input type="button" value="OK" onclick="setMaxScore();" id="buttonMaxScore" />
+            <div class="rules">
+                <ol>
+                    <li>Roll the dice to try to accumulate points.</li>
+                    <li>Be careful not to lose what you have already won.</li>
+                    <li>If you get 1 in one of the dice, your points of the round will be zeroed and the turn will be of the next player.</li>
+                    <li>If you get 6 on both dice simultaneously, you lose all points you have saved on match and the turn will be of the next player.</li>
+                    <li>The winner of the game will be the one who can accumulate the amount of points of the final score.</li>
+                </ol>
             </div>
         </div>
 

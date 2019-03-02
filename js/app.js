@@ -29,7 +29,7 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = 0;
             nextPlayer();
-        }else if (dice == 1 && dice2 == 1) {
+        }else if (dice == 1 || dice2 == 1) {
             nextPlayer();
         } else {
             roundScore += dice + dice2;
