@@ -29,11 +29,11 @@ document.querySelector(".btn-roll").addEventListener("click", function() {
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = 0;
             nextPlayer();
-        }else if (dice > 1 && dice2 > 1) {
+        }else if (dice == 1 && dice2 == 1) {
+            nextPlayer();
+        } else {
             roundScore += dice + dice2;
             document.querySelector("#current-" + activePlayer).textContent = roundScore;
-        } else {
-            nextPlayer();
         }
     }
 });
@@ -67,14 +67,17 @@ function nextPlayer() {
     document.querySelector(".player-0-panel").classList.toggle("active");
     document.querySelector(".player-1-panel").classList.toggle("active");
 
-    document.querySelector(".dice").style.display = "none";
-    document.querySelector(".dice2").style.display = "none";
+    setTimeout(function() {
+        document.querySelector(".dice").style.display = "none";
+        document.querySelector(".dice2").style.display = "none";
+    }, 1000);
 }
 
 document.querySelector(".btn-new").addEventListener("click", init);
 
 function setMaxScore() {
     maxScore = document.getElementById("maxScore").value;
+    document.getElementById("finalScore").textContent = maxScore;
 }
 
 function init() {
@@ -87,6 +90,8 @@ function init() {
     document.querySelector(".dice").style.display = "none";
     document.querySelector(".dice2").style.display = "none";
 
+
+    document.getElementById("finalScore").textContent = "100";
     document.getElementById("maxScore").value = "";
     document.getElementById("score-0").textContent = "0";
     document.getElementById("score-1").textContent = "0";
