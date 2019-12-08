@@ -8,6 +8,8 @@ git clone http://github.com/HalissonAlves/Medieval-Dice-Game.git
 ```
 And open the index.html file
 
+*You can use the final app in this link:* [Final App](https://halissonalves.github.io/Medieval-Dice-Game/)
+
 ## Rules of the game
 * Roll the dice to try to accumulate points.
 * Be careful not to lose what you have already won.
